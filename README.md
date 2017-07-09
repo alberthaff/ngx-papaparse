@@ -94,7 +94,7 @@ export class AppComponent {
 For more information, please refer to the official [Papa Parser documentation](http://papaparse.com/docs).
 
 #### Configuration
-The second paramter in `papa.parse()` and `papa.unparse()` contains the configuration.
+The second parameter in `papa.parse()` and `papa.unparse()` contains the configuration.
 
 ##### Options:
 
