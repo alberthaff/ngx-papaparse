@@ -32,14 +32,6 @@ module.exports = {
           'awesome-typescript-loader?configFileName=src/tsconfig.json&declaration=false',
           'angular2-template-loader'
         ]
-      },
-      {
-        test: /\.scss$/,
-        loaders: ['raw-loader', 'sass-loader']
-      },
-      {
-        test: /\.(html|css)$/,
-        loader: 'raw-loader'
       }
     ]
   },
@@ -57,8 +49,6 @@ module.exports = {
     '@angular/common',
     '@angular/compiler',
     '@angular/core',
-    '@angular/forms',
-    '@angular/http',
-    'rxjs/Rx'
+    '@angular/http'
   ]
 };

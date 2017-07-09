@@ -81,19 +81,17 @@ import { PapaParseService } from 'ngx-papaparse';
 export class AppComponent {
 
     constructor(private papa: PapaParseService) {
-        let data = ["Helloe", "World!"];
+        let data = [
+            ["Hello", "World!"],
+            ["Line", "two"]
+        ];
         
-        console.log(this.papa.unparse(data,{
-            complete: (results, file) => {
-                alert("The data has been parsed!");
-                console.log("Parsed: ", results, file);
-            }
-        }));
+        console.log("Parsed: ", this.papa.unparse(data));
     }
 }
 ```
 
-For more information, please refer to the [Papa Parser documentation](http://papaparse.com/docs).
+For more information, please refer to the official [Papa Parser documentation](http://papaparse.com/docs).
 
 #### Configuration
 The second paramter in `papa.parse()` and `papa.unparse()` contains the configuration.

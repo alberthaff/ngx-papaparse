@@ -6,11 +6,6 @@ import {PapaParseConfig} from "./papaparseconfig.interface";
 export class PapaParseService {
     private papa:any  = require('papaparse/papaparse.min.js');
 
-
-    constructor() {
-
-    }
-
     /**
      * Parse CSV to an array
      * @param csvString
@@ -24,15 +19,17 @@ export class PapaParseService {
      * Convert an array into CSV
      * @param data
      * @param config
-     * @returns {any}
+     * @returns {string}
      */
-    unparse(data,config:PapaParseConfig){
+    unparse(data,config?:PapaParseConfig){
         return this.papa.unparse(data,config);
     }
 
 
     /**
-     * Set LocalChunkSize
+     * Set the size in bytes of each file chunk.
+     * Used when streaming files obtained from the DOM that
+     * exist on the local computer. Default 10 MB.
      * @param value {string}
      */
     public setLocalChunkSize(value:string){
@@ -40,7 +37,8 @@ export class PapaParseService {
     }
 
     /**
-     * Set RemoteChunkSize
+     * Set the size in bytes of each remote file chunk.
+     * Used when streaming remote files. Default 5 MB.
      * @param value {string}
      */
     public setRemoteChunkSize(value:string){
@@ -48,21 +46,32 @@ export class PapaParseService {
     }
 
     /**
-     * Set DefaultDelimiter
+     * Set the delimiter used when it is left unspecified and cannot be detected automatically. Default is comma.
      * @param value {string}
      */
     public setDefaultDelimiter(value:string){
         this.papa.setDefaultDelimiter(value);
     }
 
-    // Read-only parameters
-
     /**
      * An array of characters that are not allowed as delimiters.
      */
     public BAD_DELIMITERS       = this.papa.BAD_DELIMITERS;
+
+    /**
+     * The true delimiter. Invisible. ASCII code 30.
+     * Should be doing the job we strangely rely upon commas and tabs for.
+     */
     public RECORD_SEP           = this.papa.RECORD_SEP;
+
+    /**
+     * Also sometimes used as a delimiting character. ASCII code 31.
+     */
     public UNIT_SEP             = this.papa.UNIT_SEP;
+
+    /**
+     * Whether or not the browser supports HTML5 Web Workers.
+     * If false, worker: true will have no effect.
+     */
     public WORKERS_SUPPORTED    = this.papa.WORKERS_SUPPORTED;
-    public SCRIPT_PATH          = this.papa.SCRIPT_PATH;
 }
