@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { PapaParseConfig } from "./papaparseconfig.interface";
+import { PapaParseConfig, PapaParseResult } from "./papaparse.interface";
 
 
 @Injectable()
@@ -11,7 +11,7 @@ export class PapaParseService {
      * @param csvString
      * @param config
      */
-    parse(csvString:string,config?:PapaParseConfig){
+    parse(csvString:string,config?:PapaParseConfig): PapaParseResult {
         return this.papa.parse(csvString,config);
     }
 
@@ -21,7 +21,7 @@ export class PapaParseService {
      * @param config
      * @returns {string}
      */
-    unparse(data,config?:PapaParseConfig){
+    unparse(data,config?:PapaParseConfig): string {
         return this.papa.unparse(data,config);
     }
 
@@ -32,7 +32,7 @@ export class PapaParseService {
      * exist on the local computer. Default 10 MB.
      * @param value {string}
      */
-    public setLocalChunkSize(value:string){
+    public setLocalChunkSize(value:string): void {
         this.papa.setLocalChunkSize(value);
     }
 
@@ -41,7 +41,7 @@ export class PapaParseService {
      * Used when streaming remote files. Default 5 MB.
      * @param value {string}
      */
-    public setRemoteChunkSize(value:string){
+    public setRemoteChunkSize(value:string): void {
         this.papa.setRemoteChunkSize(value);
     }
 
@@ -49,7 +49,7 @@ export class PapaParseService {
      * Set the delimiter used when it is left unspecified and cannot be detected automatically. Default is comma.
      * @param value {string}
      */
-    public setDefaultDelimiter(value:string){
+    public setDefaultDelimiter(value:string): void {
         this.papa.setDefaultDelimiter(value);
     }
 

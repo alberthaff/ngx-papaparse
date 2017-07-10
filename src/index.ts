@@ -1,4 +1,1 @@
-export {
-    PapaParseModule,
-    PapaParseService
-} from './lib/index';
+export * from './lib/index';

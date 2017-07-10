@@ -21,7 +21,7 @@
     "index.ts",
     "types/papaparse.d.ts",
     "lib/papaparse.service.ts",
-    "lib/papaparseconfig.interface.ts",
+    "lib/papaparse.interface.ts",
     "lib/papaparse.module.ts"
   ],
   "angularCompilerOptions": {

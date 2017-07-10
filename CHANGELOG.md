@@ -1,5 +1,6 @@
 1.2.2
   - Added types for all parameters in the config interface.
+  - Added new interfaces for PapaParseError, PapaParseMeta, PapaParseResult and PapaParseParser
   - Cleaned up code in PapaParseModule.
   - Minor changes in readme.
 

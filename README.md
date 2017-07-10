@@ -1,17 +1,11 @@
 # Angular 2/4 wrapper for Papa Parse
 
-<a href="https://www.npmjs.com/package/ngx-papaparse">
-    <img src="https://img.shields.io/npm/v/ngx-papaparse.svg" alt="npm version" height="18">
-</a>
-<a href="https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/npm/l/ngx-papaparse.svg" alt="license" height="18">
-</a>
-<a href="https://www.npmjs.com/package/ngx-papaparse">
-    <img src="https://img.shields.io/npm/dt/ngx-papaparse.svg" alt="npm downloads" height="18">
-</a>
+<a href="https://www.npmjs.com/package/ngx-papaparse"><img src="https://img.shields.io/npm/v/ngx-papaparse.svg" alt="npm version" height="18"></a>
+<a href="https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/ngx-papaparse.svg" alt="license" height="18"></a>
+<a href="https://www.npmjs.com/package/ngx-papaparse"><img src="https://img.shields.io/npm/dt/ngx-papaparse.svg" alt="npm downloads" height="18"></a>
 
 
-This is an Angular wrapper library for the [Papa Parse](https://github.com/mholt/PapaParse) CSV parser.
+This is an Angular 2/4 wrapper library for the [Papa Parse](https://github.com/mholt/PapaParse) CSV parser.
 
 
 
@@ -90,8 +84,6 @@ export class AppComponent {
 }
 ```
 
-For more information, please refer to the official [Papa Parser documentation](http://papaparse.com/docs).
-
 #### Configuration
 The second parameter in `papa.parse()` and `papa.unparse()` contains the configuration.
 
@@ -122,3 +114,5 @@ The second parameter in `papa.parse()` and `papa.unparse()` contains the configu
 | step              | results, parser   | Used when streaming large files. See [the official docs](http://papaparse.com/faq#streaming) for more information.
 | complete          | results, file     | A function that is executed when parsing is complete.
 | error             | error, file       | A callback to execute if [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader) encounters an error. |
+
+For more information, please refer to the official [Papa Parser documentation](http://papaparse.com/docs).
