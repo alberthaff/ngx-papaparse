@@ -1,3 +1,6 @@
+1.2.1
+  - Added tags for NPM.
+  
 1.2.0
   - Optimized the compiler-configuration.
 
