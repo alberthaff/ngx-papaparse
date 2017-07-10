@@ -1,6 +1,6 @@
 {
   "name": "ngx-papaparse",
-  "description": "Papa Parse wrapper for Angular 2/4.",
+  "description": "Papa Parse (csv parser) wrapper for Angular 2/4.",
   "bugs": "https://github.com/alberthaff/ngx-papaparse/issues",
   "license": "MIT",
   "version": "1.2.1",

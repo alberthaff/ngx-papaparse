@@ -59,12 +59,11 @@ export class AppComponent {
     constructor(private papa: PapaParseService) {
         let csvData = '"Hello","World!"';
         
-        console.log(this.papa.parse(csvData,{
+        this.papa.parse(csvData,{
             complete: (results, file) => {
-                alert("The data has been parsed!");
-                console.log("Parsed: ", results, file);
+                console.log('Parsed: ', results, file);
             }
-        }));
+        });
     }
 }
 ```
@@ -82,11 +81,11 @@ export class AppComponent {
 
     constructor(private papa: PapaParseService) {
         let data = [
-            ["Hello", "World!"],
-            ["Line", "two"]
+            ['Hello', 'World!'],
+            ['Line', 'two']
         ];
         
-        console.log("Parsed: ", this.papa.unparse(data));
+        console.log('Unparsed: ', this.papa.unparse(data));
     }
 }
 ```

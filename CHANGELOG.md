@@ -1,3 +1,8 @@
+1.2.2
+  - Added types for all parameters in the config interface.
+  - Cleaned up code in PapaParseModule.
+  - Minor changes in readme.
+
 1.2.1
   - Added tags for NPM.
   

@@ -1,5 +1,5 @@
-import {Injectable} from '@angular/core';
-import {PapaParseConfig} from "./papaparseconfig.interface";
+import { Injectable } from '@angular/core';
+import { PapaParseConfig } from "./papaparseconfig.interface";
 
 
 @Injectable()
