@@ -4,10 +4,10 @@
     <img src="https://img.shields.io/npm/v/ngx-papaparse.svg" alt="npm version" height="18">
 </a>
 <a href="https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md">
-    <img src="https://img.shields.io/npm/l/ngx-papaparse.svg" alt="npm version" height="18">
+    <img src="https://img.shields.io/npm/l/ngx-papaparse.svg" alt="license" height="18">
 </a>
 <a href="https://www.npmjs.com/package/ngx-papaparse">
-    <img src="https://img.shields.io/npm/dt/ngx-papaparse.svg" alt="npm version" height="18">
+    <img src="https://img.shields.io/npm/dt/ngx-papaparse.svg" alt="npm downloads" height="18">
 </a>
 
 
