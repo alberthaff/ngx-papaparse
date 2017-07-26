@@ -46,6 +46,6 @@ export interface PapaParseConfig {
     skipEmptyLines?: boolean,
     chunk?: (results: PapaParseResult, parser:PapaParseParser) => void,
     fastMode?: boolean,
-    beforeFirstChunk?: (a,b) => any, // todo: Add function with parameters
+    beforeFirstChunk?: (a:any,b:any) => any, // todo: Add function with parameters
     withCredentials?: boolean
 }
