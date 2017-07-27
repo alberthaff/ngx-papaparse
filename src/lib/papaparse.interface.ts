@@ -41,11 +41,11 @@ export interface PapaParseConfig {
     comments?: false,
     step?: (results: PapaParseResult, parser:PapaParseParser) => void,
     complete?: (results: PapaParseResult, parser:PapaParseParser) => void,
-    error?: any, // todo: Add function with parameters
+    error?: (error:any, file:any) => void,
     download?: boolean,
     skipEmptyLines?: boolean,
     chunk?: (results: PapaParseResult, parser:PapaParseParser) => void,
     fastMode?: boolean,
-    beforeFirstChunk?: (a:any,b:any) => any, // todo: Add function with parameters
+    beforeFirstChunk?: (chunk:string) => string|void,
     withCredentials?: boolean
 }
