@@ -8,7 +8,7 @@ export class PapaParseService {
 
     /**
      * Parse CSV to an array
-     * @param csvString
+     * @param csv
      * @param config
      */
     parse(csv:string|File,config?:PapaParseConfig): PapaParseResult {
