@@ -3,7 +3,7 @@
   "description": "Papa Parse wrapper for Angular 2/4.",
   "bugs": "https://github.com/alberthaff/ngx-papaparse/issues",
   "license": "MIT",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "keywords": [
     "csv",
     "parser",

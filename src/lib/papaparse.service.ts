@@ -11,8 +11,8 @@ export class PapaParseService {
      * @param csvString
      * @param config
      */
-    parse(csvString:string,config?:PapaParseConfig): PapaParseResult {
-        return this.papa.parse(csvString,config);
+    parse(csv:string|File,config?:PapaParseConfig): PapaParseResult {
+        return this.papa.parse(csv,config);
     }
 
     /**

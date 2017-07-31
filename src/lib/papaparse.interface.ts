@@ -22,7 +22,7 @@ export interface PapaParseResult {
 export interface PapaParseParser {
     abort: () => PapaParseResult,
     aborted: () => boolean,
-    parse: (csvString:string, baseIndex:number, ignoreLastRow:boolean) => PapaParseResult,
+    parse: (csv:string|File, baseIndex:number, ignoreLastRow:boolean) => PapaParseResult,
     pause: () => void,
     paused: () => boolean,
     resume: () => void,
