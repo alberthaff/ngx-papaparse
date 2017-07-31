@@ -55,17 +55,14 @@
     "url": "https://github.com/alberthaff/ngx-papaparse.git"
   },
   "dependencies": {
-    "papaparse": "^4.3.3"
+    "papaparse": "^4.3.5"
   },
   "devDependencies": {
     "@types/node": "~6.0.0",
-    "angular2-inline-template-style": "~1.0.0",
-    "angular2-template-loader": "~0.6.0",
     "awesome-typescript-loader": "~3.1.0",
     "codelyzer": "~2.0.0",
     "core-js": "~2.4.0",
     "cpx": "~1.5.0",
-    "node-sass": "~4.5.0",
     "raw-loader": "~0.5.0",
     "rxjs": "~5.1.0",
     "string-replace-loader": "~1.1.0",
