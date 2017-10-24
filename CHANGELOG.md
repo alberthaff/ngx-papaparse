@@ -1,3 +1,6 @@
+1.2.5
+  - Fixed bug in setLocalChunkSize and setRemoteChunkSize.
+
 1.2.4
   - Allow parsing of files through the parse-method in the PapaParseService.
   - Cleaned up dev-dependencies.

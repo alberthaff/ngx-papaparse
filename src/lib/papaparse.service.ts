@@ -30,19 +30,19 @@ export class PapaParseService {
      * Set the size in bytes of each file chunk.
      * Used when streaming files obtained from the DOM that
      * exist on the local computer. Default 10 MB.
-     * @param value {string}
+     * @param value {number}
      */
-    public setLocalChunkSize(value:string): void {
-        this.papa.setLocalChunkSize(value);
+    public setLocalChunkSize(value:number): void {
+        this.papa.LocalChunkSize = value;
     }
 
     /**
      * Set the size in bytes of each remote file chunk.
      * Used when streaming remote files. Default 5 MB.
-     * @param value {string}
+     * @param value {number}
      */
-    public setRemoteChunkSize(value:string): void {
-        this.papa.setRemoteChunkSize(value);
+    public setRemoteChunkSize(value:number): void {
+        this.papa.RemoteChunkSize = value;
     }
 
     /**
@@ -50,7 +50,7 @@ export class PapaParseService {
      * @param value {string}
      */
     public setDefaultDelimiter(value:string): void {
-        this.papa.setDefaultDelimiter(value);
+        this.papa.DefaultDelimiter = value;
     }
 
     /**

@@ -115,4 +115,4 @@ The second parameter in `papa.parse()` and `papa.unparse()` contains the configu
 | complete          | results, file     | A function that is executed when parsing is complete.
 | error             | error, file       | A callback to execute if [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader) encounters an error. |
 
-For more information, please refer to the official [Papa Parser documentation](http://papaparse.com/docs).
+For more information, please refer to the official [Papa Parse documentation](http://papaparse.com/docs).
