@@ -49,3 +49,7 @@ export interface PapaParseConfig {
     beforeFirstChunk?: (chunk:string) => string|void,
     withCredentials?: boolean
 }
+
+export interface PapaParseGlobalConfig {
+    workerScriptPath?: string
+}

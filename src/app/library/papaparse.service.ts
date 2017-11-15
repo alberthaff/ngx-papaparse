@@ -1,10 +1,14 @@
 import { Injectable } from '@angular/core';
-import { PapaParseConfig, PapaParseResult } from "./papaparse.interface";
-
+import {PapaParseConfig, PapaParseGlobalConfig, PapaParseResult} from "./papaparse.interface";
+import * as papa from 'papaparse/papaparse.min.js';
 
 @Injectable()
 export class PapaParseService {
-    private papa:any  = require('papaparse/papaparse.min.js');
+    private papa:any  = papa;
+
+    public config: PapaParseGlobalConfig = {
+        //workerScriptPath: 'assets/papaparse.min.js'
+    };
 
     /**
      * Parse CSV to an array
@@ -12,6 +16,13 @@ export class PapaParseService {
      * @param config
      */
     parse(csv:string|File,config?:PapaParseConfig): PapaParseResult {
+        if(config.worker){
+            if(this.config.workerScriptPath) {
+                this.papa.SCRIPT_PATH = this.config.workerScriptPath;
+            } else {
+                throw new Error("When using workers, the workerScriptPath must be defined in global ngx-papaparse configuration. See https://github.com/Alberthaff/ngx-papaparse/wiki/Using-workers for more information.");
+            }
+        }
         return this.papa.parse(csv,config);
     }
 
@@ -30,19 +41,19 @@ export class PapaParseService {
      * Set the size in bytes of each file chunk.
      * Used when streaming files obtained from the DOM that
      * exist on the local computer. Default 10 MB.
-     * @param value {string}
+     * @param value {number}
      */
-    public setLocalChunkSize(value:string): void {
-        this.papa.setLocalChunkSize(value);
+    public setLocalChunkSize(value:number): void {
+        this.papa.LocalChunkSize = value;
     }
 
     /**
      * Set the size in bytes of each remote file chunk.
      * Used when streaming remote files. Default 5 MB.
-     * @param value {string}
+     * @param value {number}
      */
-    public setRemoteChunkSize(value:string): void {
-        this.papa.setRemoteChunkSize(value);
+    public setRemoteChunkSize(value:number): void {
+        this.papa.RemoteChunkSize = value;
     }
 
     /**
@@ -50,7 +61,7 @@ export class PapaParseService {
      * @param value {string}
      */
     public setDefaultDelimiter(value:string): void {
-        this.papa.setDefaultDelimiter(value);
+        this.papa.DefaultDelimiter = value;
     }
 
     /**
