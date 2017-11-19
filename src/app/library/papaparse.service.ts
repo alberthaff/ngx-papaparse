@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import {Inject, Injectable} from '@angular/core';
 import {PapaParseConfig, PapaParseGlobalConfig, PapaParseResult} from "./papaparse.interface";
 import * as papa from 'papaparse/papaparse.min.js';
 
@@ -6,9 +6,11 @@ import * as papa from 'papaparse/papaparse.min.js';
 export class PapaParseService {
     private papa:any  = papa;
 
-    public config: PapaParseGlobalConfig = {
-        //workerScriptPath: 'assets/papaparse.min.js'
-    };
+    //public config: PapaParseGlobalConfig = {};
+
+    constructor(@Inject('PapaParseGlobalConfig') private config?:PapaParseGlobalConfig){
+        console.log("CONFIG ::", config)
+    }
 
     /**
      * Parse CSV to an array
@@ -85,4 +87,9 @@ export class PapaParseService {
      * If false, worker: true will have no effect.
      */
     public WORKERS_SUPPORTED    = this.papa.WORKERS_SUPPORTED;
+
+
+    public static options(){
+
+    }
 }

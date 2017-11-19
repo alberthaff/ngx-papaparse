@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import {PapaParseModule} from "./library/papaparse.module";
+import {PapaParseGlobalConfig} from "./library/papaparse.interface";
 
 @NgModule({
     declarations: [
@@ -10,9 +11,17 @@ import {PapaParseModule} from "./library/papaparse.module";
     ],
     imports: [
         BrowserModule,
-        PapaParseModule
+        PapaParseModule,
     ],
-    providers: [],
+    providers: [
+        {
+            provide: 'PapaParseGlobalConfig',
+            useValue: <PapaParseGlobalConfig> {
+                workerScriptPath: 'assets/papaparse.min.js'
+            }
+        }
+    ],
     bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}

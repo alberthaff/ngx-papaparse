@@ -5,7 +5,11 @@ import { PapaParseService } from "./papaparse.service";
 
 @NgModule({
   imports: [CommonModule],
-  providers: [PapaParseService],
+  providers: [
+      PapaParseService,
+
+
+  ],
   declarations: [],
   exports: [CommonModule]
 })

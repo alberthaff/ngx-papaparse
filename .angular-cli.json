@@ -10,7 +10,7 @@
             "assets": [
                 "assets",
                 "favicon.ico",
-                { "glob": "**/papaparse.min.js", "input": "../node_modules/papaparse", "output": "./assets/" }
+                { "glob": "**/papaparse.min.js", "input": "../node_modules/papaparse", "output": "./assets" }
 
             ],
             "index": "index.html",
