@@ -1,0 +1,41 @@
+{
+    "name": "ngx-papaparse",
+    "description": "Papa Parse wrapper for Angular 2/4.",
+    "bugs": "https://github.com/alberthaff/ngx-papaparse/issues",
+    "license": "MIT",
+    "version": "1.3.0",
+    "repository": "https://github.com/alberthaff/ngx-papaparse.git",
+    "author": "Albert Haff <ahn@haffdata.com>",
+    "private": true,
+    "keywords": [
+        "csv",
+        "reader",
+        "parser",
+        "parse",
+        "parsing",
+        "delimited",
+        "text",
+        "data",
+        "auto-detect",
+        "comma",
+        "tab",
+        "pipe",
+        "file",
+        "filereader",
+        "stream",
+        "worker",
+        "workers",
+        "thread",
+        "threading",
+        "multi-threaded",
+        "angular",
+        "angular2",
+        "angular4",
+        "papa",
+        "papaparse"
+    ],
+    "peerDependencies": {
+        "@angular/core": "^4.1.2",
+        "@angular/common": "^4.1.2"
+    }
+}
