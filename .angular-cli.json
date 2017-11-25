@@ -9,9 +9,7 @@
             "outDir": "dist",
             "assets": [
                 "assets",
-                "favicon.ico",
-                { "glob": "**/papaparse.min.js", "input": "../node_modules/papaparse", "output": "./assets" }
-
+                "favicon.ico"
             ],
             "index": "index.html",
             "main": "main.ts",
