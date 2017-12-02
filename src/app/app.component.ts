@@ -1,10 +1,14 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { PapaParseService } from "ngx-papaparse";
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  template: "Open console for output."
 })
 export class AppComponent {
-  title = 'app';
+
+  constructor (private papa: PapaParseService) {
+     console.log(this.papa);
+  }
+
 }
