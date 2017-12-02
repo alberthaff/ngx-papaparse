@@ -1,9 +1,0 @@
-.*
-*.tgz
-
-src/
-config/
-
-package/
-npm-debug.log
-node_modules/
