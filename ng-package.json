@@ -1,9 +1,9 @@
 {
-    "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
-    "src": "ngx-papaparse",
-    "dest": "dist/ngx-papaparse",
-    "workingDirectory": ".ng_build",
-    "lib": {
-        "entryFile": "src/public_api.ts"
-    }
+  "$schema": "./node_modules/ng-packagr/ng-package.schema.json",
+  "src": "ngx-papaparse",
+  "dest": "dist/ngx-papaparse",
+  "workingDirectory": ".ng_build",
+  "lib": {
+    "entryFile": "src/index.ts"
+  }
 }
