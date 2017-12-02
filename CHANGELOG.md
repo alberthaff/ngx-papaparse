@@ -1,3 +1,6 @@
+2.0.2
+  - Updated scripts for compilation, in order to publish readme on npmjs.
+
 2.0.1
   - Fixed readme on npmjs.com
   
