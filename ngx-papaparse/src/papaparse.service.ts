@@ -1,4 +1,4 @@
-import { Injectable } from "@angular/core";
+import { Injectable, Inject } from "@angular/core";
 import { PapaParseConfig, PapaParseResult } from "./papaparse.interface";
 
 
@@ -27,6 +27,10 @@ export class PapaParseService {
      * If false, worker: true will have no effect.
      */
     public WORKERS_SUPPORTED    = this.papa.WORKERS_SUPPORTED;
+
+    constructor(@Inject("PapaParseGlobalConfig") private config?: PapaParseGlobalConfig) {
+        console.log("CONFIG ::", config);
+    }
 
     /**
      * Parse CSV to an array
