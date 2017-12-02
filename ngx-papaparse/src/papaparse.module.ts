@@ -3,17 +3,11 @@ import {CommonModule} from "@angular/common";
 import {PapaParseService} from "./papaparse.service";
 
 @NgModule({
-  imports: [
-    CommonModule
-  ]
+    imports: [
+        CommonModule,
+    ],
+    providers: [
+        PapaParseService
+    ]
 })
-export class PapaParseModule {
-    public static forRoot(): ModuleWithProviders {
-        return {
-            ngModule: PapaParseModule,
-            providers: [
-                PapaParseService
-            ]
-        };
-    }
-}
+export class PapaParseModule { }
