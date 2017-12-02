@@ -1,25 +1,21 @@
-# Angular 2/4 wrapper for Papa Parse
+# Papa Parse wrapper for Angular 2/4 
 
-<a href="https://www.npmjs.com/package/ngx-papaparse"><img src="https://img.shields.io/npm/v/ngx-papaparse.svg" alt="npm version" height="18"></a>
-<a href="https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md"><img src="https://img.shields.io/npm/l/ngx-papaparse.svg" alt="license" height="18"></a>
-<a href="https://www.npmjs.com/package/ngx-papaparse"><img src="https://img.shields.io/npm/dt/ngx-papaparse.svg" alt="npm downloads" height="18"></a>
-
-
-This is an Angular 2/4 wrapper library for the [Papa Parse](https://github.com/mholt/PapaParse) CSV parser.
+[![Version](https://img.shields.io/npm/v/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
+[![License](https://img.shields.io/npm/l/ngx-papaparse.svg?style=flat-square)](https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md)
+[![NPM downloads](https://img.shields.io/npm/dt/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
+[![GitHub stars](https://img.shields.io/github/stars/alberthaff/ngx-papaparse.svg?label=Stars&style=flat-square)](https://github.com/Alberthaff/ngx-papaparse)
 
 
 
-## Building the library
-This step is only required if you intend to modify the library. Otherwise, just complete the installation.
+This is a [Papa Parse](https://github.com/mholt/PapaParse) wrapper library for Angular 2/4.
 
-    npm install
-    npm run build
+For Angular 5 and beyond, please use the [latest version](https://www.npmjs.com/package/ngx-papaparse).
 
 
 ## Installation
 You can install the library with [npm](https://npmjs.com).
 
-    npm install ngx-papaparse --save 
+    npm install ngx-papaparse@1.2.5 --save 
 
 
 ## Getting started
@@ -98,7 +94,7 @@ The second parameter in `papa.parse()` and `papa.unparse()` contains the configu
 | dynamicTyping     | boolean                       | If true, numeric and boolean data will be converted to their type instead of remaining strings. Numeric data must conform to the definition of a decimal literal. European-formatted numbers must have commas and dots swapped. If also accepts an object or a function. If object it's values should be a boolean to indicate if dynamic typing should be applied for each column number (or header name if using headers). If it's a function, it should return a boolean value for each field number (or name if using headers) which will be passed as first argument. |
 | preview           | number                        | If > 0, only that many rows will be parsed. |
 | encoding          | string                        | The encoding to use when opening local files. If specified, it must be a value supported by the [FileReader API](https://developer.mozilla.org/en/docs/Web/API/FileReader). |
-| worker            | boolean                       | Whether or not to use a worker thread. Using a worker will keep your page reactive, but may be slightly slower. Web Workers also load the entire Javascript file, so be careful when combining other libraries in the same file as Papa Parse. Note that worker option is only available when parsing files and not when converting from JSON to CSV.
+| worker            | boolean                       | This option is only available from version 2.0.0
 | comments          | string                        | A string that indicates a comment (for example, "#" or "//"). When Papa encounters a line starting with this string, it will skip the line. |
 | download          | boolean                       | If true, this indicates that the string you passed as the first argument to `papa.parse()` is actually a URL from which to download a file and parse its contents. |
 | skipEmptyLines    | boolean                       | If true, lines that are completely empty will be skipped. An empty line is defined to be one which evaluates to empty string. |
