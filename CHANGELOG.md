@@ -1,8 +1,9 @@
-1.3.0
+2.0.0
+  - ngx-papaparse 2 only supports Angular 5. Use [v1](https://github.com/Alberthaff/ngx-papaparse/tree/v1) for older versions.
+  - Added official support for Angular 5, closes [#7](https://github.com/Alberthaff/ngx-papaparse/issues/7).
   - Switched to ng-packagr for compilation.
   - Fixed web-worker support, closes [#6](https://github.com/Alberthaff/ngx-papaparse/issues/6).
   - Added support for global configuration.
-  - Added support for default configuration.
 
 1.2.5
   - Fixed bug in setLocalChunkSize and setRemoteChunkSize.

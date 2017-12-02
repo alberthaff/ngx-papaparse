@@ -1,12 +1,13 @@
-# Angular 2/4/5 wrapper for Papa Parse
-
+# Angular 5 wrapper for Papa Parse
 
 [![Version](https://img.shields.io/npm/v/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
 [![License](https://img.shields.io/npm/l/ngx-papaparse.svg?style=flat-square)](https://github.com/Alberthaff/ngx-papaparse/blob/master/LICENSE.md)
 [![NPM downloads](https://img.shields.io/npm/dt/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
 [![GitHub stars](https://img.shields.io/github/stars/alberthaff/ngx-papaparse.svg?label=Stars&style=flat-square)](https://github.com/Alberthaff/ngx-papaparse)
 
-This is an Angular 2/4/5 wrapper library for the [Papa Parse](https://github.com/mholt/PapaParse) CSV parser.
+This is an Angular 5 wrapper library for the [Papa Parse](https://github.com/mholt/PapaParse) CSV parser.
+
+For older versions of Angular, please use [ngx-papaparse 1.x](https://github.com/Alberthaff/ngx-papaparse/tree/v1).
 
 <i>Full documentation available in the [ngx-papaparse wiki](https://github.com/Alberthaff/ngx-papaparse/wiki).</i>
 

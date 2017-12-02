@@ -22,7 +22,7 @@ export interface PapaParseResult {
 export interface PapaParseParser {
     abort: () => PapaParseResult,
     aborted: () => boolean,
-    parse: (csv:string|File, baseIndex:number, ignoreLastRow:boolean) => PapaParseResult,
+    parse: (csv: string|File, baseIndex: number, ignoreLastRow: boolean) => PapaParseResult,
     pause: () => void,
     paused: () => boolean,
     resume: () => void,
@@ -30,7 +30,7 @@ export interface PapaParseParser {
 }
 
 export interface PapaParseConfig {
-    delimiter?: string | ((input?:string) => string),
+    delimiter?: string | ((input?: string) => string),
     newline?: string,
     quoteChar?: string,
     header?: boolean,
@@ -39,13 +39,17 @@ export interface PapaParseConfig {
     encoding?: string,
     worker?: boolean,
     comments?: false,
-    step?: (results: PapaParseResult, parser:PapaParseParser) => void,
-    complete?: (results: PapaParseResult, parser:PapaParseParser) => void,
-    error?: (error:any, file:any) => void,
+    step?: (results: PapaParseResult, parser: PapaParseParser) => void,
+    complete?: (results: PapaParseResult, parser: PapaParseParser) => void,
+    error?: (error: any, file: any) => void,
     download?: boolean,
     skipEmptyLines?: boolean,
-    chunk?: (results: PapaParseResult, parser:PapaParseParser) => void,
+    chunk?: (results: PapaParseResult, parser: PapaParseParser) => void,
     fastMode?: boolean,
-    beforeFirstChunk?: (chunk:string) => string|void,
+    beforeFirstChunk?: (chunk: string) => string|void,
     withCredentials?: boolean
+}
+
+export interface PapaParseGlobalConfig {
+    workerScriptPath?: string
 }

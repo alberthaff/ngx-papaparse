@@ -1,5 +1,5 @@
-import { Injectable, Inject } from "@angular/core";
-import { PapaParseConfig, PapaParseResult } from "./papaparse.interface";
+import {Injectable, Inject, Optional} from "@angular/core";
+import {PapaParseConfig, PapaParseGlobalConfig, PapaParseResult} from "./papaparse.interface";
 
 
 @Injectable()
@@ -28,8 +28,10 @@ export class PapaParseService {
      */
     public WORKERS_SUPPORTED    = this.papa.WORKERS_SUPPORTED;
 
-    constructor(@Inject("PapaParseGlobalConfig") private config?: PapaParseGlobalConfig) {
-        console.log("CONFIG ::", config);
+    constructor(@Optional() @Inject("PapaParseGlobalConfig") private config?: PapaParseGlobalConfig) {
+        if (!this.config) {
+            this.config = {};
+        }
     }
 
     /**
@@ -37,7 +39,19 @@ export class PapaParseService {
      * @param csv
      * @param config
      */
-    parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
+    public parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
+        if (config) {
+            if (config.worker === true) {
+                if (this.config.workerScriptPath) {
+                    this.papa.SCRIPT_PATH = this.config.workerScriptPath;
+                } else {
+                    throw new Error("When using workers, the workerScriptPath must be defined in global" +
+                        " ngx-papaparse configuration. See https://github.com/Alberthaff/ngx-papaparse/wiki/Using-workers" +
+                        " for more information.");
+                }
+            }
+        }
+
         return this.papa.parse(csv, config);
     }
 
@@ -47,7 +61,19 @@ export class PapaParseService {
      * @param config
      * @returns {string}
      */
-    unparse(data, config?: PapaParseConfig): string {
+    public unparse(data, config?: PapaParseConfig): string {
+        if (config) {
+            if (config.worker === true) {
+                if (this.config.workerScriptPath) {
+                    this.papa.SCRIPT_PATH = this.config.workerScriptPath;
+                } else {
+                    throw new Error("When using workers, the workerScriptPath must be defined in global" +
+                        " ngx-papaparse configuration. See https://github.com/Alberthaff/ngx-papaparse/wiki/Using-workers" +
+                        " for more information.");
+                }
+            }
+        }
+
         return this.papa.unparse(data, config);
     }
 
