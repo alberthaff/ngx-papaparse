@@ -1,3 +1,6 @@
+2.0.1
+  - Fixed readme on npmjs.com
+  
 2.0.0
   - ngx-papaparse 2 only supports Angular 5. Use [v1](https://github.com/Alberthaff/ngx-papaparse/tree/v1) for older versions.
   - Added official support for Angular 5, closes [#7](https://github.com/Alberthaff/ngx-papaparse/issues/7).
