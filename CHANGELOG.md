@@ -1,3 +1,6 @@
+2.0.3
+  - Fixed incorrect peer dependency, closes [#10](https://github.com/Alberthaff/ngx-papaparse/issues/10).
+
 2.0.2
   - Updated scripts for compilation, in order to publish readme on npmjs.
 
@@ -37,5 +40,4 @@
   - Added better comments in the PapaParseService.
 
 1.0.0 First public release
-
   - Initial release of the ngx-papaparse library.
