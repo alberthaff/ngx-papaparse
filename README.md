@@ -79,5 +79,4 @@ export class AppComponent {
 }
 ```
 
-
 For more information, please refer to the [ngx-papaparse wiki](https://github.com/Alberthaff/ngx-papaparse/wiki) and the official [Papa Parse documentation](http://papaparse.com/docs).
