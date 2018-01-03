@@ -3,7 +3,7 @@
     "description": "Papa Parse wrapper for Angular 2/4/5.",
     "bugs": "https://github.com/alberthaff/ngx-papaparse/issues",
     "license": "MIT",
-    "version": "2.0.3",
+    "version": "2.0.4",
     "repository": "https://github.com/alberthaff/ngx-papaparse.git",
     "author": "Albert Haff <ahn@haffdata.com>",
     "keywords": [

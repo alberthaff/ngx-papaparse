@@ -1,3 +1,6 @@
+2.0.4
+  - Fixed incorrect type on comments-parameter, closes [#13](https://github.com/Alberthaff/ngx-papaparse/issues/13).
+
 2.0.3
   - Fixed incorrect peer dependency, closes [#10](https://github.com/Alberthaff/ngx-papaparse/issues/10).
 

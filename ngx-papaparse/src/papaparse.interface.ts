@@ -38,7 +38,7 @@ export interface PapaParseConfig {
     preview?: number,
     encoding?: string,
     worker?: boolean,
-    comments?: false,
+    comments?: false|string,
     step?: (results: PapaParseResult, parser: PapaParseParser) => void,
     complete?: (results: PapaParseResult, parser: PapaParseParser) => void,
     error?: (error: any, file: any) => void,
