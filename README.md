@@ -14,8 +14,15 @@ For older versions of Angular, please use [ngx-papaparse 1.x](https://github.com
 ## Installation
 You can install the library with [npm](https://npmjs.com).
 
-    npm install ngx-papaparse --save 
 
+**Angular 5**
+
+    npm install ngx-papaparse --save
+
+
+**Angular 2 and 4**
+
+    npm install ngx-papaparse@1.2.5 --save
 
 ## Getting started
 
