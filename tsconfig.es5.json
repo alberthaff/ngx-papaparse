@@ -1,8 +1,8 @@
 {
     "angularCompilerOptions": {
         "annotateForClosureCompiler": true,
-        "flatModuleId": "papaparse",
-        "flatModuleOutFile": "papaparse.js",
+        "flatModuleId": "ngx-papaparse",
+        "flatModuleOutFile": "ngx-papaparse.js",
         "genDir": "../out-tsc/lib-gen-dir/",
         "strictMetadataEmit": true,
         "skipTemplateCodegen": true

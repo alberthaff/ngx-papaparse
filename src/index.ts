@@ -1,4 +1,5 @@
 export * from './papa-parse.module';
+export { PapaParseService } from './papa-parse.service';
 export { PapaParseConfig } from './interfaces/papa-parse-config';
 export { PapaParseError } from './interfaces/papa-parse-error';
 export { PapaParseGlobalConfig } from './interfaces/papa-parse-global-config';
