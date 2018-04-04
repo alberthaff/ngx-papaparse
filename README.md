@@ -1,3 +1,5 @@
+![Logo](https://raw.githubusercontent.com/Alberthaff/ngx-papaparse/master/assets/ngx-papaparse.svg)
+
 # Papa Parse wrapper for Angular 5
 
 [![Version](https://img.shields.io/npm/v/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
