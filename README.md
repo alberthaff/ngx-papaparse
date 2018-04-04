@@ -1,4 +1,4 @@
-![Logo](https://raw.githubusercontent.com/Alberthaff/ngx-papaparse/master/assets/ngx-papaparse.svg)
+![Logo](https://raw.githubusercontent.com/Alberthaff/ngx-papaparse/master/assets/ngx-papaparse.svg?sanitize=true)
 
 # Papa Parse wrapper for Angular 5
 
