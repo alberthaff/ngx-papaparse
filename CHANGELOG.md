@@ -1,8 +1,21 @@
+2.1.3
+  - Fixed incorrect package.json data.
+
+2.1.2
+  - Fixed incorrect instructions in readme.
+
+2.1.1
+  - Changed exception links to point to new website. 
+
+2.1.0
+  - Switched to angular-librarian, closes [#18](https://github.com/alberthaff/ngx-papaparse/issues/18).
+  - Added a new interface for unparse, closes [#17](https://github.com/alberthaff/ngx-papaparse/issues/17).
+
 2.0.4
-  - Fixed incorrect type on comments-parameter, closes [#13](https://github.com/Alberthaff/ngx-papaparse/issues/13).
+  - Fixed incorrect type on comments-parameter, closes [#13](https://github.com/alberthaff/ngx-papaparse/issues/13).
 
 2.0.3
-  - Fixed incorrect peer dependency, closes [#10](https://github.com/Alberthaff/ngx-papaparse/issues/10).
+  - Fixed incorrect peer dependency, closes [#10](https://github.com/alberthaff/ngx-papaparse/issues/10).
 
 2.0.2
   - Updated scripts for compilation, in order to publish readme on npmjs.
@@ -11,10 +24,10 @@
   - Fixed readme on npmjs.com
   
 2.0.0
-  - ngx-papaparse 2 only supports Angular 5. Use [v1](https://github.com/Alberthaff/ngx-papaparse/tree/v1) for older versions.
-  - Added official support for Angular 5, closes [#7](https://github.com/Alberthaff/ngx-papaparse/issues/7).
+  - papaparse 2 only supports Angular 5. Use [v1](https://github.com/alberthaff/ngx-papaparse/tree/v1) for older versions.
+  - Added official support for Angular 5, closes [#7](https://github.com/alberthaff/ngx-papaparse/issues/7).
   - Switched to ng-packagr for compilation.
-  - Fixed web-worker support, closes [#6](https://github.com/Alberthaff/ngx-papaparse/issues/6).
+  - Fixed web-worker support, closes [#6](https://github.com/alberthaff/ngx-papaparse/issues/6).
   - Added support for global configuration.
 
 1.2.5
@@ -25,7 +38,7 @@
   - Cleaned up dev-dependencies.
 
 1.2.3
-  - Added correct types for parameters on beforeFirstChunk and error in PapaParseConfig interface, closes [#1](https://github.com/Alberthaff/ngx-papaparse/issues/1).
+  - Added correct types for parameters on beforeFirstChunk and error in PapaParseConfig interface, closes [#1](https://github.com/alberthaff/ngx-papaparse/issues/1).
   
 1.2.2
   - Added types for all parameters in the config interface.
@@ -43,4 +56,4 @@
   - Added better comments in the PapaParseService.
 
 1.0.0 First public release
-  - Initial release of the ngx-papaparse library.
+  - Initial release of the papaparse library.
