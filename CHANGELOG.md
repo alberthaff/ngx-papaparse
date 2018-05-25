@@ -1,11 +1,11 @@
 2.1.3
-  - Fixed incorrect package.json data.
+  - Fixed incorrect instructions in README.
 
 2.1.2
-  - Fixed incorrect instructions in readme.
-
+  - Fixed incorrect metadata in package.json.
+  
 2.1.1
-  - Changed exception links to point to new website. 
+  - Switched exception-links to point to the new website.
 
 2.1.0
   - Switched to angular-librarian, closes [#18](https://github.com/alberthaff/ngx-papaparse/issues/18).
