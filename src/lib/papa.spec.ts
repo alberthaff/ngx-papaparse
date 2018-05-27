@@ -1,6 +1,6 @@
 import { TestBed, inject } from '@angular/core/testing';
 
-import { PapaParse } from './papa-parse';
+import { PapaParse } from './papa';
 
 describe('Papaparse', () => {
   beforeEach(() => {

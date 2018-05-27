@@ -2,7 +2,12 @@
   - Added support for Angular 6, closes [#19](https://github.com/alberthaff/ngx-papaparse/issues/19).
   - Switched to Angular CLI for compilation, closes [#20](https://github.com/alberthaff/ngx-papaparse/issues/20).
   - Added unit tests to everything works as intended, closes [#21](https://github.com/alberthaff/ngx-papaparse/issues/21).
-  - Renamed `PapaParserService` to `PapaParse`.
+  - Renamed `PapaParseService` to `Papa`.
+  - Renamed `BAD_DELIMITERS`, `RECORD_SEP`, `UNIT_SEP` and `WORKERS_SUPPORTED` to `badDelimiters`, `recordSeperator`, `unitSeperator` and `workersSupported`.
+  - Swithced `setLocalChunkSize()`, `setRemoteChunkSize()`, `setRemoteChunkSize()` and `badDelimiters()` to setters and getters.
+   
+2.1.1
+  - Switched links to documentation to point to new website.
 
 2.1.0
   - Switched to angular-librarian, closes [#18](https://github.com/alberthaff/ngx-papaparse/issues/18).

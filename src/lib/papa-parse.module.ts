@@ -1,7 +1,10 @@
 import { NgModule } from '@angular/core';
+import {Papa} from './papa';
 
 @NgModule({
-  imports: [
-  ],
+    imports: [],
+    providers: [
+        Papa
+    ]
 })
 export class PapaParseModule { }

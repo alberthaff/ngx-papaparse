@@ -3,14 +3,13 @@ import {PapaParseGlobalConfig} from './interfaces/papa-parse-global-config';
 import {PapaParseResult} from './interfaces/papa-parse-result';
 import {PapaParseConfig} from './interfaces/papa-parse-config';
 import {PapaUnparseConfig} from './interfaces/papa-unparse-config';
-import {papa} from 'papaparse/papaparse.min.js';
+import * as lib from 'papaparse/papaparse.min.js';
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable()
 export class Papa {
-    constructor(private papaLib: papa,
-                @Optional() @Inject('PapaParseGlobalConfig') private config?: PapaParseGlobalConfig
+    private papaLib = lib;
+
+    constructor(@Optional() @Inject('PapaParseGlobalConfig') private config?: PapaParseGlobalConfig
     ) {
         if (!this.config) {
             this.config = {};
@@ -93,7 +92,7 @@ export class Papa {
      * Whether or not the browser supports HTML5 Web Workers.
      * If false, worker: true will have no effect.
      */
-    get workersSupported() {
+    get workersSupported(): boolean {
         return this.papaLib.WORKERS_SUPPORTED;
     }
 }
