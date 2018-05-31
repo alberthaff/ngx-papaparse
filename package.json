@@ -1,6 +1,6 @@
 {
   "name": "ngx-papaparse",
-  "version": "2.1.3",
+  "version": "2.1.4",
   "description": "Papa Parse wrapper for Angular 2/4/5. Fast parser-library for CSV to JSON and vice versa, with built in support for background-workers.",
   "main": "./bundles/ngx-papaparse.umd.js",
   "module": "./ngx-papaparse.es5.js",
@@ -106,7 +106,7 @@
     "webpack-node-externals": "^1.5.4"
   },
   "repository": {
-    "url": "https://github.com/Alberthaff/ngx-papaparse"
+    "url": "https://github.com/alberthaff/ngx-papaparse"
   },
   "homepage": "https://alberthaff.dk/projects/ngx-papaparse/docs/v2"
 }

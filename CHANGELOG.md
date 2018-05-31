@@ -1,3 +1,6 @@
+2.1.4
+  - Added missing dependencies to package.json
+
 2.1.3
   - Fixed incorrect instructions in README.
 
