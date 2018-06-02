@@ -3,6 +3,8 @@
 # Papa Parse wrapper for Angular
 
 [![Version](https://img.shields.io/npm/v/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
+[![Travis](https://img.shields.io/travis/alberthaff/ngx-papaparse.svg?style=flat-square)](https://travis-ci.org/alberthaff/ngx-papaparse)
+[![Coveralls github](https://img.shields.io/coveralls/github/alberthaff/ngx-papaparse.svg?style=flat-square)](https://coveralls.io/github/alberthaff/ngx-papaparse)
 [![License](https://img.shields.io/npm/l/ngx-papaparse.svg?style=flat-square)](https://github.com/alberthaff/ngx-papaparse/blob/master/LICENSE.md)
 [![NPM downloads](https://img.shields.io/npm/dt/ngx-papaparse.svg?style=flat-square)](https://www.npmjs.com/package/ngx-papaparse)
 [![GitHub stars](https://img.shields.io/github/stars/alberthaff/ngx-papaparse.svg?label=Stars&style=flat-square)](https://github.com/alberthaff/ngx-papaparse)
