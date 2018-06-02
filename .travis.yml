@@ -7,4 +7,4 @@ before_script:
   - npm install
 
 script:
-  - ng test --browser PhantomJS ngx-papaparse
+  - ng test ngx-papaparse --browsers PhantomJS
