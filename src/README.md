@@ -16,15 +16,14 @@ You can install the library with [npm](https://npmjs.com).
 
 ### Angular 6
 
-    npm install ngx-papaparse --save
+    npm install ngx-papaparse@3.0.0-beta.0 --save
     
 [Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v3)
 
 
 ### Older version of Angular
 
-For older versions of Angular, please use [ngx-papaparse 1.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v1) for NG 2/4 or [ngx-papaparse 2.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v2) for NG 5.
-
+For older versions of Angular, please use [ngx-papaparse 2.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v2) for Angular 5 or [ngx-papaparse 1.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v1) for Angular 2/4.
 
 ## Getting started
 
@@ -32,7 +31,7 @@ First import the `PapaParseModule` into your app.
 
 ```typescript
 import { PapaParseModule } from 'ngx-papaparse';
- 
+
 @NgModule({
   ...
   imports: [
@@ -47,14 +46,14 @@ Then use it in a component.
 ```typescript
 import { Component } from '@angular/core';
 import { Papa } from 'ngx-papaparse';
- 
+
 @Component({
   ...
 })
 export class AppComponent {
- 
+
     constructor(private papa: Papa) {
-        let csvData = '"Hello","World!"';
+        const csvData = '"Hello","World!"';
         
         this.papa.parse(csvData,{
             complete: (results, file) => {

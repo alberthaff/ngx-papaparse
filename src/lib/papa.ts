@@ -22,11 +22,13 @@ export class Papa {
     public parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
         if (config) {
             if (config.worker === true) {
-                if (this.config.workerScriptPath) {
-                    this.papaLib.SCRIPT_PATH = this.config.workerScriptPath;
+                if (this.config.scriptPath) {
+                    console.log('CONFIG!', config);
+                    this.papaLib.SCRIPT_PATH = this.config.scriptPath;
                 } else {
                     throw new Error('When using workers, the workerScriptPath must be defined in global' +
-                        ' papaparse configuration. See https://github.com/Alberthaff/papaparse/wiki/Using-workers' +
+                        ' papaparse configuration. See' +
+                        ' https://alberthaff.dk/projects/ngx-papaparse/docs/v3/parsing-csv/using-serviceworkers' +
                         ' for more information.');
                 }
             }

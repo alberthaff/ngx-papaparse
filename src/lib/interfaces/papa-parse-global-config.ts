@@ -1,3 +1,3 @@
 export interface PapaParseGlobalConfig {
-    workerScriptPath?: string;
+    scriptPath?: string;
 }
