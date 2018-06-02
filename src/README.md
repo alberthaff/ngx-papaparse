@@ -18,7 +18,7 @@ You can install the library with [npm](https://npmjs.com).
 
 ### Angular 6
 
-    npm install ngx-papaparse@3 --save
+    npm install ngx-papaparse@3.0.0-beta.0 --save
     
 [Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v3)
 
