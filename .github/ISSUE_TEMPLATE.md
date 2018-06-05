@@ -5,7 +5,7 @@ A clear and concise description of what the bug or problem is.
 
 **To Reproduce**
 
-Please provide the necessary steps to reproduce the unwanted behaviour:
+Please provide the necessary steps to reproduce the unwanted behaviour.
 
 
 **Expected behavior**
