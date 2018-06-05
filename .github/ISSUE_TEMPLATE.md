@@ -15,7 +15,7 @@ A clear and concise description of what you expected to happen.
 
 **Software and platform**
 
-- OS: 
+ - OS: 
  - Browser: 
  - Version:
  - Angular version:
