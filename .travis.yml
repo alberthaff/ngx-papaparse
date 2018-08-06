@@ -7,4 +7,5 @@ before_script:
   - npm install
 
 script:
-  - ng test ngx-papaparse --browsers PhantomJS --watch=false
+  - npm run test
+  - npm run test:coverage
