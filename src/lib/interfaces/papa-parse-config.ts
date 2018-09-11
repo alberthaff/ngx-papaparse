@@ -12,7 +12,7 @@ export interface PapaParseConfig {
     worker?: boolean;
     comments?: false|string;
     step?: (results: PapaParseResult, parser: PapaParseParser) => void;
-    complete?: (results: PapaParseResult, parser: PapaParseParser) => void;
+    complete?: (results: PapaParseResult, file?: File) => void;
     error?: (error: any, file: any) => void;
     download?: boolean;
     skipEmptyLines?: boolean;
