@@ -58,8 +58,8 @@ export class AppComponent {
         const csvData = '"Hello","World!"';
         
         this.papa.parse(csvData,{
-            complete: (results, file) => {
-                console.log('Parsed: ', results, file);
+            complete: (result) => {
+                console.log('Parsed: ', result);
             }
         });
     }
