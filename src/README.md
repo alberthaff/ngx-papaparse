@@ -43,7 +43,7 @@ import { PapaParseModule } from 'ngx-papaparse';
 })
 ```
 
-Then use it in a component.
+Then use it in a component or service.
 
 ```typescript
 import { Component } from '@angular/core';
