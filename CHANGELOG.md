@@ -1,3 +1,6 @@
+3.0.1
+  - Added support for Angular 7, closes [#30](https://github.com/alberthaff/ngx-papaparse/issues/30).
+
 3.0.0
   - Added support for Angular 6, closes [#19](https://github.com/alberthaff/ngx-papaparse/issues/19).
   - Switched to Angular CLI for compilation, closes [#20](https://github.com/alberthaff/ngx-papaparse/issues/20).
