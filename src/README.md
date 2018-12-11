@@ -29,21 +29,7 @@ For older versions of Angular, please use [ngx-papaparse 2.x](https://alberthaff
 
 ## Getting started
 
-First import the `PapaParseModule` into your app.
-
-```typescript
-import { PapaParseModule } from 'ngx-papaparse';
-
-@NgModule({
-  ...
-  imports: [
-    ...
-    PapaParseModule
-  ]
-})
-```
-
-Then use it in a component or service.
+Use the Papa Service directly in your component:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -58,8 +44,8 @@ export class AppComponent {
         const csvData = '"Hello","World!"';
         
         this.papa.parse(csvData,{
-            complete: (results, file) => {
-                console.log('Parsed: ', results, file);
+            complete: (result) => {
+                console.log('Parsed: ', result);
             }
         });
     }

@@ -28,22 +28,7 @@ You can install the library with [npm](https://npmjs.com).
 For older versions of Angular, please use [ngx-papaparse 2.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v2) for Angular 5 or [ngx-papaparse 1.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v1) for Angular 2/4.
 
 ## Getting started
-
-First import the `PapaParseModule` into your app.
-
-```typescript
-import { PapaParseModule } from 'ngx-papaparse';
-
-@NgModule({
-  ...
-  imports: [
-    ...
-    PapaParseModule
-  ]
-})
-```
-
-Then use it in a component.
+Use the Papa Service directly in your component:
 
 ```typescript
 import { Component } from '@angular/core';
@@ -58,8 +43,8 @@ export class AppComponent {
         const csvData = '"Hello","World!"';
         
         this.papa.parse(csvData,{
-            complete: (results, file) => {
-                console.log('Parsed: ', results, file);
+            complete: (result) => {
+                console.log('Parsed: ', result);
             }
         });
     }

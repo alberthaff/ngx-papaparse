@@ -5,7 +5,9 @@ import {PapaParseConfig} from './interfaces/papa-parse-config';
 import {PapaUnparseConfig} from './interfaces/papa-unparse-config';
 import * as lib from 'papaparse/papaparse.min.js';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class Papa {
     public _papa = lib;
 
