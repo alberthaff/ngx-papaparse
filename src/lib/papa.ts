@@ -1,5 +1,4 @@
-import {Inject, Injectable, Optional} from '@angular/core';
-import {PapaParseGlobalConfig} from './interfaces/papa-parse-global-config';
+import {Injectable} from '@angular/core';
 import {PapaParseResult} from './interfaces/papa-parse-result';
 import {PapaParseConfig} from './interfaces/papa-parse-config';
 import {PapaUnparseConfig} from './interfaces/papa-unparse-config';
@@ -11,30 +10,10 @@ import * as lib from 'papaparse/papaparse.min.js';
 export class Papa {
     public _papa = lib;
 
-    constructor(@Optional() @Inject('PapaParseGlobalConfig') private config?: PapaParseGlobalConfig
-    ) {
-        if (!this.config) {
-            this.config = {};
-        }
-    }
-
     /**
      * Parse CSV to an array
      */
     public parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
-        if (config) {
-            if (config.worker === true) {
-                if (this.config.scriptPath) {
-                    this._papa.SCRIPT_PATH = this.config.scriptPath;
-                } else {
-                    throw new Error('When using workers, the workerScriptPath must be defined in global' +
-                        ' papaparse configuration. See' +
-                        ' https://alberthaff.dk/projects/ngx-papaparse/docs/v3/parsing-csv/using-serviceworkers' +
-                        ' for more information.');
-                }
-            }
-        }
-
         return this._papa.parse(csv, config);
     }
 
