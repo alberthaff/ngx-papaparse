@@ -16,14 +16,14 @@ This is a [Papa Parse](https://github.com/mholt/PapaParse) wrapper library for A
 ## Installation
 You can install the library with [npm](https://npmjs.com).
 
-### Angular 6
+### Angular 6 and 7
 
     npm install ngx-papaparse@3 --save
     
 [Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v3)
 
 
-### Older version of Angular
+### Older versions of Angular
 
 For older versions of Angular, please use [ngx-papaparse 2.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v2) for Angular 5 or [ngx-papaparse 1.x](https://alberthaff.dk/projects/ngx-papaparse/docs/v1) for Angular 2/4.
 
@@ -43,7 +43,7 @@ import { PapaParseModule } from 'ngx-papaparse';
 })
 ```
 
-Then use it in a component.
+Then use it in a component or service.
 
 ```typescript
 import { Component } from '@angular/core';

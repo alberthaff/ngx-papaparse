@@ -1,3 +1,10 @@
+3.0.2
+  - Fixed bug that prevented use of the interfaces, in projects using this library, closes [#33](https://github.com/alberthaff/ngx-papaparse/issues/33).
+  - Upgraded to papaparse 4.6.2, closes [#26](https://github.com/alberthaff/ngx-papaparse/issues/26)
+
+3.0.1
+  - Added support for Angular 7, closes [#30](https://github.com/alberthaff/ngx-papaparse/issues/30).
+
 3.0.0
   - Added support for Angular 6, closes [#19](https://github.com/alberthaff/ngx-papaparse/issues/19).
   - Switched to Angular CLI for compilation, closes [#20](https://github.com/alberthaff/ngx-papaparse/issues/20).
