@@ -82,11 +82,11 @@ describe('Papa', () => {
     }));
 
     it('should return record separator', inject([Papa], (papa: Papa) => {
-        expect(papa.recordSeperator).toBe(papa._papa.RECORD_SEP);
+        expect(papa.recordSeparator).toBe(papa._papa.RECORD_SEP);
     }));
 
     it('should return unit separator', inject([Papa], (papa: Papa) => {
-        expect(papa.unitSeperator).toBe(papa._papa.UNIT_SEP);
+        expect(papa.unitSeparator).toBe(papa._papa.UNIT_SEP);
     }));
 
     it('should return whether workers are supported', inject([Papa], (papa: Papa) => {

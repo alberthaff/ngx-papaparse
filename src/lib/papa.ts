@@ -59,14 +59,14 @@ export class Papa {
      * The true delimiter. Invisible. ASCII code 30.
      * Should be doing the job we strangely rely upon commas and tabs for.
      */
-    get recordSeperator() {
+    get recordSeparator() {
         return this._papa.RECORD_SEP;
     }
 
     /**
      * Also sometimes used as a delimiting character. ASCII code 31.
      */
-    get unitSeperator() {
+    get unitSeparator() {
         return this._papa.UNIT_SEP;
     }
 
