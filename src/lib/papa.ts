@@ -1,7 +1,7 @@
-import {Injectable} from '@angular/core';
-import {PapaParseResult} from './interfaces/papa-parse-result';
-import {PapaParseConfig} from './interfaces/papa-parse-config';
-import {PapaUnparseConfig} from './interfaces/papa-unparse-config';
+import { Injectable } from '@angular/core';
+import { ParseResult } from './interfaces/parse-result';
+import { ParseConfig } from './interfaces/parse-config';
+import { UnparseConfig } from './interfaces/unparse-config';
 import * as lib from 'papaparse/papaparse.min.js';
 
 @Injectable({
@@ -13,14 +13,14 @@ export class Papa {
     /**
      * Parse CSV to an array
      */
-    public parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
+    public parse(csv: string|File, config?: ParseConfig): ParseResult {
         return this._papa.parse(csv, config);
     }
 
     /**
      * Convert an array into CSV
      */
-    public unparse(data, config?: PapaUnparseConfig): string {
+    public unparse(data, config?: UnparseConfig): string {
         return this._papa.unparse(data, config);
     }
 

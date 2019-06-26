@@ -1,4 +1,4 @@
-export interface PapaParseMeta {
+export interface ParseMeta {
     delimiter: string;
     linebreak: string;
     aborted: boolean;
