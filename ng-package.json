@@ -1,0 +1,11 @@
+{
+  "$schema": "node_modules/ng-packagr/ng-package.schema.json",
+  "dest": "dist/ngx-papaparse",
+  "lib": {
+    "entryFile": "src/public_api.ts"
+  },
+  "deleteDestPath": true,
+  "whitelistedNonPeerDependencies": [
+    "papaparse"
+  ]
+}
