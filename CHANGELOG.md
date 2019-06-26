@@ -1,3 +1,6 @@
+3.0.3
+  - Added support for Angular 8, closes [#40](https://github.com/alberthaff/ngx-papaparse/issues/40).
+
 3.0.2
   - Fixed bug that prevented use of the interfaces, in projects using this library, closes [#33](https://github.com/alberthaff/ngx-papaparse/issues/33).
   - Upgraded to papaparse 4.6.2, closes [#26](https://github.com/alberthaff/ngx-papaparse/issues/26)
