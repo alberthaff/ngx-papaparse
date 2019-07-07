@@ -12,12 +12,12 @@ export interface UnparseConfig {
     quoteChar?: string;
 
     /**
-     * TODO
+     * The character used to escape quoteChar inside field values.
      */
-    // TODO escapeChar: '"',
+    escapeChar?: '"';
 
     /**
-     * The delimiting character. Must not be found in papa.badDelimiters().
+     * The delimiting character. Must not be found in papa.badDelimiters.
      */
     delimiter?: string;
 
@@ -35,12 +35,14 @@ export interface UnparseConfig {
     newline?: '\r' | '\n' | '\r\n';
 
     /**
-     * TODO
+     * If true, lines that are completely empty (those which evaluate to an empty string) will be skipped.
+     * If set to 'greedy', lines that don't have any content (those which have only whitespace after parsing) will also be skipped.
      */
-    // TODO skipEmptyLines: false, //or 'greedy',
+    skipEmptyLines?: boolean | 'greedy';
 
     /**
-     * TODO
+     * If data is an array of objects this option can be used to manually specify the keys (columns) you expect in the objects.
+     * If not set the keys of the first objects are used as column.
      */
-    // TODO columns: null //or array of strings
+    columns?: string[];
 }
