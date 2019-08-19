@@ -29,7 +29,7 @@ For older versions of Angular, please use [ngx-papaparse 2.x](https://alberthaff
 
 ## Getting started
 
-Use the Papa Service directly in your component:
+Use the Papa Service in your project:
 
 ```typescript
 import { Component } from '@angular/core';
