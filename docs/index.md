@@ -89,6 +89,7 @@ Options and callbacks are added as the second parameter in `papa.parse()`.
 | complete          | results, file     | A function that is executed when parsing is complete.
 | error             | error, file       | A callback to execute if [FileReader](https://developer.mozilla.org/en/docs/Web/API/FileReader) encounters an error. |
 
+
 # Generating CSV
 
 The `papa.unparse()` converts an array to CSV:
@@ -118,10 +119,3 @@ export class AppComponent {
 | delimiter         | string                        | The character to be used as delimiter, default `,`. |
 | header            | boolean                       | Add header to file? |
 | newline           | string                        | Newline character, default `\\r\\n`. |
-
-# Global configuration
-## Options
-
-| Option            | Type         | Explanation   |
-| ----------------- | ------------ | ------------- |
-| scriptPath        | string       | Path for the papaparse.min.js script. |
