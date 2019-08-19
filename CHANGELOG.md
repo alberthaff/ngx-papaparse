@@ -1,3 +1,8 @@
+4.0.0
+  - Added support for new options and callbacks introduced by Papa Parse 5.
+  - Removed global configuration, since it is no longer needed.
+  - `Papa` is automatically imported in the root-module of your app. 
+  
 3.0.1
   - Added support for Angular 7, closes [#30](https://github.com/alberthaff/ngx-papaparse/issues/30).
 
