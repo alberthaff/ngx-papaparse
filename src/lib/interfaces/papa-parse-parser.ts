@@ -1,9 +1,9 @@
-import {PapaParseResult} from './papa-parse-result';
+import {ParseResult} from './parse-result';
 
 export interface PapaParseParser {
-    abort: () => PapaParseResult;
+    abort: () => ParseResult;
     aborted: () => boolean;
-    parse: (csv: string|File, baseIndex: number, ignoreLastRow: boolean) => PapaParseResult;
+    parse: (csv: string|File, baseIndex: number, ignoreLastRow: boolean) => ParseResult;
     pause: () => void;
     paused: () => boolean;
     resume: () => void;

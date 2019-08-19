@@ -39,17 +39,6 @@ describe('Papa', () => {
         // TODO
     }));
 
-    it('should throw exception if trying to use workers without scriptPath defined', inject([Papa], (papa: Papa) => {
-        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
-
-        expect(() => papa.parse(csv, {
-            worker: true
-        })).toThrow(Error('When using workers, the workerScriptPath must be defined in global' +
-            ' papaparse configuration. See' +
-            ' https://alberthaff.dk/projects/ngx-papaparse/docs/v3/parsing-csv/using-serviceworkers' +
-            ' for more information.'));
-    }));
-
     it('should generate CSV from array', inject([Papa], (papa: Papa) => {
         const data = [
             ['a', 'b,', 'c"'],
@@ -82,11 +71,11 @@ describe('Papa', () => {
     }));
 
     it('should return record separator', inject([Papa], (papa: Papa) => {
-        expect(papa.recordSeperator).toBe(papa._papa.RECORD_SEP);
+        expect(papa.recordSeparator).toBe(papa._papa.RECORD_SEP);
     }));
 
     it('should return unit separator', inject([Papa], (papa: Papa) => {
-        expect(papa.unitSeperator).toBe(papa._papa.UNIT_SEP);
+        expect(papa.unitSeparator).toBe(papa._papa.UNIT_SEP);
     }));
 
     it('should return whether workers are supported', inject([Papa], (papa: Papa) => {
