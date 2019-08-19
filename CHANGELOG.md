@@ -1,3 +1,6 @@
+4.0.1
+  - Fixed incorrect title in readme
+
 4.0.0
   - Added support for new options and callbacks introduced by Papa Parse 5.
   - Removed global configuration, since it is no longer needed.
