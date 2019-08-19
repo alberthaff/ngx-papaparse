@@ -11,10 +11,7 @@ In order to install the library, run following command in your project directory
 $ npm install ngx-papaparse@4 --save
 ```
 
-
-## Getting started
-
-Papa Parse is automatically imported to your project. Simply start using the `Papa`-service.
+Once installed, Papa Parse is automatically imported to your project.
 
 # Parsing CSV
 The `papa.parse()` function can either parse synchronously:
@@ -64,17 +61,20 @@ Options and callbacks are added as the second parameter in `papa.parse()`.
 | delimiter         | string or (input) => any      | The delimiting character. Leave blank to auto-detect. It can be a string or a function. If string, it must be one of length 1. If a function, it must accept the input as first parameter and it must return a string which will be used as delimiter. In both cases it cannot be found in `papa.BAD_DELIMITERS`. |
 | newline           | string                        | The newline sequence. Leave blank to auto-detect. Must be one of `\\r`, `\\n`, or `\\r\\n`. |
 | quoteChar         | string                        | The character used to quote fields. The quoting of all fields is not mandatory. Any field which is not quoted will correctly read. |
+| escapeChar        | string                        | The character used to escape the quote character within a field.  If not set, this option will default to the value of quoteChar, meaning that the default escaping of quote character within a quoted field is using the quote character two times. (e.g. "column with ""quotes"" in text") |
 | header            | boolean                       | If true, the first row of parsed data will be interpreted as field names. An array of field names will be returned in meta, and each row of data will be an object of values keyed by field name instead of a simple array. Rows with a different number of fields from the header row will produce an error. Warning: Duplicate field names will overwrite values in previous fields having the same name. |
+| transformHeader   | (header: string) => string    | A function to apply on each header. Requires header to be true. The function receives the header as its first argument. |
 | dynamicTyping     | boolean                       | If true, numeric and boolean data will be converted to their type instead of remaining strings. Numeric data must conform to the definition of a decimal literal. European-formatted numbers must have commas and dots swapped. If also accepts an object or a function. If object it's values should be a boolean to indicate if dynamic typing should be applied for each column number (or header name if using headers). If it's a function, it should return a boolean value for each field number (or name if using headers) which will be passed as first argument. |
 | preview           | number                        | If > 0, only that many rows will be parsed. |
 | encoding          | string                        | The encoding to use when opening local files. If specified, it must be a value supported by the [FileReader API](https://developer.mozilla.org/en/docs/Web/API/FileReader). |
-| worker            | boolean                       | Whether or not to use a worker thread. Using a worker will keep your page reactive, but may be slightly slower. Note that worker option is only available when parsing files and not when converting from JSON to CSV.
+| worker            | boolean                       | Whether or not to use a worker thread. Using a worker will keep your page reactive, but may be slightly slower. Note that worker option is only available when parsing files and not when converting from JSON to CSV. |
 | comments          | string                        | A string that indicates a comment (for example, "#" or "//"). When Papa encounters a line starting with this string, it will skip the line. |
 | download          | boolean                       | If true, this indicates that the string you passed as the first argument to `papa.parse()` is actually a URL from which to download a file and parse its contents. |
+| downloadRequestHeaders | {[key: string]: string}  | Headers to be included in the download request. |
 | skipEmptyLines    | boolean                       | If true, lines that are completely empty will be skipped. An empty line is defined to be one which evaluates to empty string. |
 | fastMode          | boolean                       | Fast mode speeds up parsing significantly for large inputs. However, it only works when the input has no quoted fields. Fast mode will automatically be enabled if no " characters appear in the input. You can force fast mode either way by setting it to true or false. |
 | withCredentials   | boolean                       | A boolean value passed directly into XMLHttpRequest's "withCredentials" property. |
-
+| delimitersToGuess | string[]                      | An array of delimiters to guess from if the delimiter option is not set. |
 
 
 ## Callbacks
