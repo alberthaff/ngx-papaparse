@@ -1,45 +1,26 @@
-import {Inject, Injectable, Optional} from '@angular/core';
-import {PapaParseGlobalConfig} from './interfaces/papa-parse-global-config';
-import {PapaParseResult} from './interfaces/papa-parse-result';
-import {PapaParseConfig} from './interfaces/papa-parse-config';
-import {PapaUnparseConfig} from './interfaces/papa-unparse-config';
+import { Injectable } from '@angular/core';
+import { ParseResult } from './interfaces/parse-result';
+import { ParseConfig } from './interfaces/parse-config';
+import { UnparseConfig } from './interfaces/unparse-config';
 import * as lib from 'papaparse/papaparse.min.js';
 
-@Injectable()
+@Injectable({
+    providedIn: 'root',
+})
 export class Papa {
     public _papa = lib;
-
-    constructor(@Optional() @Inject('PapaParseGlobalConfig') private config?: PapaParseGlobalConfig
-    ) {
-        if (!this.config) {
-            this.config = {};
-        }
-    }
 
     /**
      * Parse CSV to an array
      */
-    public parse(csv: string|File, config?: PapaParseConfig): PapaParseResult {
-        if (config) {
-            if (config.worker === true) {
-                if (this.config.scriptPath) {
-                    this._papa.SCRIPT_PATH = this.config.scriptPath;
-                } else {
-                    throw new Error('When using workers, the workerScriptPath must be defined in global' +
-                        ' papaparse configuration. See' +
-                        ' https://alberthaff.dk/projects/ngx-papaparse/docs/v3/parsing-csv/using-serviceworkers' +
-                        ' for more information.');
-                }
-            }
-        }
-
+    public parse(csv: string|File, config?: ParseConfig): ParseResult {
         return this._papa.parse(csv, config);
     }
 
     /**
      * Convert an array into CSV
      */
-    public unparse(data, config?: PapaUnparseConfig): string {
+    public unparse(data, config?: UnparseConfig): string {
         return this._papa.unparse(data, config);
     }
 
@@ -78,14 +59,14 @@ export class Papa {
      * The true delimiter. Invisible. ASCII code 30.
      * Should be doing the job we strangely rely upon commas and tabs for.
      */
-    get recordSeperator() {
+    get recordSeparator() {
         return this._papa.RECORD_SEP;
     }
 
     /**
      * Also sometimes used as a delimiting character. ASCII code 31.
      */
-    get unitSeperator() {
+    get unitSeparator() {
         return this._papa.UNIT_SEP;
     }
 
