@@ -1,3 +1,6 @@
+4.0.2
+  - Fixed ParseError not being exported, closes [#47](https://github.com/alberthaff/ngx-papaparse/issues/47).
+
 4.0.1
   - Fixed incorrect title in readme
 
