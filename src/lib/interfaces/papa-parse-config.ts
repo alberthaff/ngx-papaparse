@@ -15,7 +15,7 @@ export interface PapaParseConfig {
     complete?: (results: PapaParseResult, file?: File) => void;
     error?: (error: any, file: any) => void;
     download?: boolean;
-    skipEmptyLines?: boolean;
+    skipEmptyLines?: boolean|'greedy';
     chunk?: (results: PapaParseResult, parser: PapaParseParser) => void;
     fastMode?: boolean;
     beforeFirstChunk?: (chunk: string) => string|void;
