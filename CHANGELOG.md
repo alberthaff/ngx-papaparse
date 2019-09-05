@@ -1,3 +1,6 @@
+3.0.4
+  - Fixed typing of skipEmptyLines, to allow value `greedy`.
+
 3.0.3
   - Added support for Angular 8, closes [#40](https://github.com/alberthaff/ngx-papaparse/issues/40).
 
