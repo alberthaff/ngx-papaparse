@@ -1,3 +1,6 @@
+4.0.4
+  - Recompiled with NG8 support.
+
 4.0.3
   - Fixed typing of skipEmptyLines, to allow value `greedy`.
 
