@@ -102,7 +102,7 @@ export interface ParseConfig {
      * If true, lines that are completely empty (those which evaluate to an empty string) will be skipped. If set to 'greedy',
      * lines that don't have any content (those which have only whitespace after parsing) will also be skipped.
      */
-    skipEmptyLines?: boolean;
+    skipEmptyLines?: boolean | 'greedy';
 
     /**
      * A callback function, identical to step, which activates streaming.
