@@ -1,7 +1,7 @@
 # Introduction
 
 This library is a Papa Parse wrapper for Angular.
-This version is only compatible with Angular 6+.
+This version is only compatible with Angular 8+.
 For older versions of Angular, please use an older version of ngx-papaparse.
 
 # Installation
