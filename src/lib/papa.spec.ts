@@ -114,6 +114,35 @@ describe('Papa', () => {
         });
 
         expect(result).toBe(`=a,+b,-c,@d,"'1e","'2f","'3g","'4h"`);
+
+    it('should generate CSV from array Object', inject([Papa], (papa: Papa) => {
+        const data = [
+            { A: 'a', B: 'b,', C: 'c"' },
+            { A: 'd', B: 'e', C: 'f' },
+            { A: 'g', B: 'h', C: 'i' },
+        ];
+        const result = papa.unparse(data, {
+            delimiter: ','
+        });
+
+        expect(result).toBe('A,B,C\r\na,"b,","c"""\r\nd,e,f\r\ng,h,i');
+    }));
+
+    it('should generate CSV from Map Object', inject([Papa], (papa: Papa) => {
+        const data = {
+            fields: ['A', 'B', 'C'],
+            data: [
+                ['a', 'b,', 'c"'],
+                ['d', 'e', 'f'],
+                ['g', 'h', 'i']
+            ]
+        };
+
+        const result = papa.unparse(data, {
+            delimiter: ','
+        });
+
+        expect(result).toBe('A,B,C\r\na,"b,","c"""\r\nd,e,f\r\ng,h,i');
     }));
 
     // Test setters
