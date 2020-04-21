@@ -35,6 +35,25 @@ describe('Papa', () => {
         }));
     }));
 
+    it('should parse basic CSV from string and return each step', inject([Papa], (papa: Papa) => {
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+
+        const expected = [
+            ['a', 'b,', 'c"'],
+            ['d', 'e', 'f'],
+            ['g', 'h', 'i']
+        ];
+
+        let line = 0;
+        papa.parse(csv, {
+            step: result => {
+                // Check step data
+                expect(result.data).toEqual(jasmine.objectContaining(expected[line]));
+                line++;
+            }
+        });
+    }));
+
     it('should parse CSV from local file', inject([Papa], (papa: Papa) => {
         const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
         const universalBOM = '\uFEFF';
