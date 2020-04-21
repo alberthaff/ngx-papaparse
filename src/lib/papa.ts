@@ -1,4 +1,6 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { scan, shareReplay } from 'rxjs/operators';
 import { ParseResult } from './interfaces/parse-result';
 import { ParseConfig } from './interfaces/parse-config';
 import { UnparseConfig } from './interfaces/unparse-config';
@@ -13,8 +15,55 @@ export class Papa {
     /**
      * Parse CSV to an array
      */
-    public parse(csv: string|File, config?: ParseConfig): ParseResult {
+    public parse(csv: string|Blob, config?: ParseConfig): ParseResult {
         return this._papa.parse(csv, config);
+    }
+
+    /**
+     * Parse CSV to Observable
+     */
+    public parseToObservable(csv: string|Blob, config: ParseConfig = {}): Observable<ParseResult> {
+        const { chunk, step, complete, ...filteredConfig } = config;
+
+        const observable = new Observable<ParseResult>(observer => {
+            this._papa.parse(csv, {
+                ...filteredConfig,
+                step: (result, parser) => {
+                    observer.next(result);
+
+                    if (step) {
+                        step(result, parser);
+                    }
+                },
+                complete: (result, parser) => {
+                    observer.complete();
+
+                    if (complete) {
+                        complete(result, parser);
+                    }
+                }
+            });
+        });
+
+        const emptyResult: ParseResult = {
+            data: [],
+            errors: [],
+            meta: {
+                delimiter: '',
+                linebreak: '',
+                aborted: false,
+                fields: [],
+                truncated: false,
+            }
+        };
+
+        return observable.pipe(
+            scan((acc, cur) => ({
+                ...cur,
+                data: [...acc.data, cur.data]
+            }), emptyResult),
+            shareReplay(1)
+        );
     }
 
     /**

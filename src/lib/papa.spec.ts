@@ -35,6 +35,67 @@ describe('Papa', () => {
         }));
     }));
 
+    it('should parse basic CSV to Observable', inject([Papa], (papa: Papa) => {
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+
+        const expected = [
+            ['a', 'b,', 'c"'],
+            ['d', 'e', 'f'],
+            ['g', 'h', 'i']
+        ];
+
+        const observable = papa.parseToObservable(csv);
+
+        let line = 1;
+        observable.subscribe(result => {
+            expect(result.data).toEqual(jasmine.objectContaining(
+                expected.slice(0, line)
+            ));
+
+            line++;
+        });
+
+        observable.toPromise().then(result => {
+            // Check data
+            expect(result.data).toEqual(jasmine.objectContaining(expected));
+
+            // Expect no errors
+            expect(result.errors).toEqual([]);
+
+            // Expect correct meta-data
+            expect(result.meta).toEqual(jasmine.objectContaining({
+                delimiter: ',',
+                linebreak: '\n'
+            }));
+        });
+    }));
+
+    it('should parseToObservable proxy step and complete config ', inject([Papa], (papa: Papa) => {
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+
+        const step = jasmine.createSpy();
+        const complete = jasmine.createSpy();
+
+        const observable = papa.parseToObservable(csv, { step, complete });
+
+        observable.toPromise().then(data => {
+            expect(step).toHaveBeenCalled();
+            expect(complete).toHaveBeenCalled();
+        });
+    }));
+
+    it('should parseToObservable prevent proxy chunk config ', inject([Papa], (papa: Papa) => {
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+
+        const chunk = jasmine.createSpy();
+
+        const observable = papa.parseToObservable(csv, { chunk });
+
+        observable.toPromise().then(data => {
+            expect(chunk).not.toHaveBeenCalled();
+        });
+    }));
+
     it('should parse CSV from local file', inject([Papa], (papa: Papa) => {
         // TODO
     }));

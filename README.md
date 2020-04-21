@@ -42,15 +42,19 @@ export class AppComponent {
 
     constructor(private papa: Papa) {
         const csvData = '"Hello","World!"';
-        
+
         this.papa.parse(csvData,{
             complete: (result) => {
                 console.log('Parsed: ', result);
             }
         });
+
+        this.papa.parseToObservable(csvData).subscribe(result => {
+            console.log('Parsed Accumulation: ', result);
+        });
     }
 }
-``` 
+```
 
 
 For a more detailed explanation of how to use this library, please refer to the [full documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v4). 
