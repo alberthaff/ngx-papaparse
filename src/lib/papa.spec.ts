@@ -36,7 +36,30 @@ describe('Papa', () => {
     }));
 
     it('should parse CSV from local file', inject([Papa], (papa: Papa) => {
-        // TODO
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+        const universalBOM = '\uFEFF';
+
+        const blob = new Blob([universalBOM, csv], { type: 'text/plain' });
+
+        papa.parse(blob, {
+            complete: result => {
+                // Check data
+                expect(result.data).toEqual(jasmine.objectContaining([
+                    ['a', 'b,', 'c"'],
+                    ['d', 'e', 'f'],
+                    ['g', 'h', 'i']
+                ]));
+
+                // Expect no errors
+                expect(result.errors).toEqual([]);
+
+                // Expect correct meta-data
+                expect(result.meta).toEqual(jasmine.objectContaining({
+                    delimiter: ',',
+                    linebreak: '\n'
+                }));
+            }
+        });
     }));
 
     it('should generate CSV from array', inject([Papa], (papa: Papa) => {
