@@ -23,7 +23,7 @@ export class Papa {
      * Parse CSV to Observable
      */
     public parseToObservable(csv: string|Blob, config: ParseConfig = {}): Observable<ParseResult> {
-        const { chunk, step, complete, ...filteredConfig } = config;
+        const { chunk, step, complete, error, ...filteredConfig } = config;
 
         const observable = new Observable<ParseResult>(observer => {
             this._papa.parse(csv, {
@@ -40,6 +40,13 @@ export class Papa {
 
                     if (complete) {
                         complete(result, parser);
+                    }
+                },
+                error: (err, file) => {
+                    observer.error(err);
+
+                    if (error) {
+                        error(err, file);
                     }
                 }
             });
