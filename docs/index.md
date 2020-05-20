@@ -1,14 +1,17 @@
+# NOT RELEASED YET
+This version is not released on NPM yet.
+
 # Introduction
 
 This library is a Papa Parse wrapper for Angular.
-This version is only compatible with Angular 8+.
+This version is only compatible with Angular 9+.
 For older versions of Angular, please use an older version of ngx-papaparse.
 
 # Installation
 In order to install the library, run following command in your project directory:
 
 ```bash
-$ npm install ngx-papaparse@4 --save
+$ npm install ngx-papaparse@5 --save
 ```
 
 Once installed, Papa Parse is automatically imported to your project.
