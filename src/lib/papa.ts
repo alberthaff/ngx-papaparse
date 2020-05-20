@@ -13,7 +13,7 @@ export class Papa {
     /**
      * Parse CSV to an array
      */
-    public parse(csv: string|File, config?: ParseConfig): ParseResult {
+    public parse(csv: string|Blob, config?: ParseConfig): ParseResult {
         return this._papa.parse(csv, config);
     }
 
