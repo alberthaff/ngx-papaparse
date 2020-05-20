@@ -42,16 +42,27 @@ export class AppComponent {
 
     constructor(private papa: Papa) {
         const csvData = '"Hello","World!"';
+        
+        // Basic parsing
+        console.log('Parsed: ', this.papa.parse(csvData));
 
+        // Async parsing
         this.papa.parse(csvData,{
             complete: (result) => {
-                console.log('Parsed: ', result);
+                console.log('Parsed async: ', result);
             }
         });
 
-        this.papa.parseToObservable(csvData).subscribe(result => {
-            console.log('Parsed Accumulation: ', result);
-        });
+        // Parse to Observable
+        this.papa.parseToObservable(csvData).subscribe(
+            result => {
+                console.log('Parse step: ', result);
+            },
+            error => {},
+            () => {
+                console.log('Parsed CSV');
+            }
+        );
     }
 }
 ```
