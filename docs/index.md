@@ -33,7 +33,8 @@ To disable this warning, add following to your build options in `angular.json`-f
 }
 ```
 This is necessary because the underlying library, Papa Parse, is a CommonJS dependency.
-Please refer to the the [Angular Documentation](https://angular.io/guide/build#configuring-commonjs-dependencies).
+
+Please refer to the [Angular Documentation](https://angular.io/guide/build#configuring-commonjs-dependencies) for more information.
 
 # Parsing CSV
 The `papa.parse()` function can either parse synchronously:
