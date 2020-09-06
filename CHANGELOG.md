@@ -1,3 +1,6 @@
+5.0.0
+  - Recompiled with NG9 and NG10 support.
+
 4.0.4
   - Recompiled with NG8 support.
 

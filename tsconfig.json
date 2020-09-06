@@ -22,5 +22,8 @@
         "dist/ngx-papaparse"
       ]
     }
+  },
+  "angularCompilerOptions": {
+    "enableIvy": false
   }
 }
