@@ -14,7 +14,7 @@ $ npm install ngx-papaparse@5 --save
 Once installed, Papa Parse is automatically imported to your project.
 
 ## Angular 10 or later
-If you are using Angular 10 or later, you will be met with following error: 
+If you are using Angular 10 or later, you will be met with following warning: 
 
 ```text
 WARNING in node_modules/ngx-papaparse/fesm2015/ngx-papaparse.js depends on 'papaparse/papaparse.min.js'. CommonJS or AMD dependencies can cause optimization bailouts.
