@@ -13,7 +13,7 @@ $ npm install ngx-papaparse@5 --save
 
 Once installed, Papa Parse is automatically imported to your project.
 
-## Angular 10+
+## Angular 10 or later
 If you are using Angular 10 or later, you will be met with following error: 
 
 ```text
@@ -32,7 +32,7 @@ To disable this warning, add following to your build options in `angular.json`-f
     }
 }
 ```
-This is necessary, because the underlying library, Papa Parse is a CommonJS dependency.
+This is necessary because the underlying library, Papa Parse, is a CommonJS dependency.
 Please refer to the the [Angular Documentation](https://angular.io/guide/build#configuring-commonjs-dependencies).
 
 # Parsing CSV
