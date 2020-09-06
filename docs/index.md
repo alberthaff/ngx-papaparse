@@ -16,12 +16,12 @@ Once installed, Papa Parse is automatically imported to your project.
 ## Angular 10+
 If you are using Angular 10 or later, you will be met with following error: 
 
-```
+```text
 WARNING in node_modules/ngx-papaparse/fesm2015/ngx-papaparse.js depends on 'papaparse/papaparse.min.js'. CommonJS or AMD dependencies can cause optimization bailouts.
 ```
 
 To disable this warning, add following to your build options in `angular.json`-file:
-```
+```json
 "build": {
     "builder": "@angular-devkit/build-angular:browser",
     "options": {
