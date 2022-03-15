@@ -45,4 +45,14 @@ export interface UnparseConfig {
      * If not set the keys of the first objects are used as column.
      */
     columns?: string[];
+
+    /**
+     * If true, field values that begin with =, +, - or @, will be prepended with a ' to defend against injection attacks,
+     * because Excel and LibreOffice will automatically parse such cells as formulae.
+     * You can override those values by setting this option to a regular expression (v6 only)
+     */
+    escapeFormulae?: boolean;
+
+    // add to escapeFormulae when papa releases v6
+    // | RegExp;
 }
