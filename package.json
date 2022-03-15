@@ -51,7 +51,7 @@
     "e2e": "ng e2e"
   },
   "dependencies": {
-    "papaparse": "^5.3.0",
+    "papaparse": "^5.3.2",
     "tslib": "^1.10.0"
   },
   "devDependencies": {

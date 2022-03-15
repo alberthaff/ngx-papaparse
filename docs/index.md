@@ -135,11 +135,11 @@ export class AppComponent {
 
 ## Options
 
-| Option            | Type                                 | Explanation   |
-|-------------------|--------------------------------------| ------------- |
-| quotes            | boolean                              | Add quotes between all values.  |
-| quoteChar         | string                               | The character to be used as quote character, default `"`. |
-| delimiter         | string                               | The character to be used as delimiter, default `,`. |
-| header            | boolean                              | Add header to file? |
-| newline           | string                               | Newline character, default `\\r\\n`. |
-| escapeFormulae    | boolean (or regular expression - v6) | prepended a ' to dangerous values |
+| Option            | Type                           | Explanation   |
+|-------------------|--------------------------------| ------------- |
+| quotes            | boolean                        | Add quotes between all values.  |
+| quoteChar         | string                         | The character to be used as quote character, default `"`. |
+| delimiter         | string                         | The character to be used as delimiter, default `,`. |
+| header            | boolean                        | Add header to file? |
+| newline           | string                         | Newline character, default `\\r\\n`. |
+| escapeFormulae    | boolean or regular expression  | prepended a ' to dangerous values |
