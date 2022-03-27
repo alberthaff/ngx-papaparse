@@ -49,7 +49,7 @@ export interface UnparseConfig {
     /**
      * If true, field values that begin with =, +, - or @, will be prepended with a ' to defend against injection attacks,
      * because Excel and LibreOffice will automatically parse such cells as formulae.
-     * You can override those values by setting this option to a regular expression
+     * You can override those values by setting this option to a regular expression.
      */
     escapeFormulae?: boolean | RegExp;
 }
