@@ -75,6 +75,28 @@ describe('Papa', () => {
         expect(result).toBe('a,"b,","c"""\r\nd,e,f\r\ng,h,i');
     }));
 
+    it('should prefix dangerous fields with a \'', inject([Papa], (papa: Papa) => {
+        const data = [
+            ['=a', '+b', '-c', '@d', '\te', '\rf']
+        ];
+        const result = papa.unparse(data, {
+            escapeFormulae: true
+        });
+
+        expect(result).toBe(`"'=a","'+b","'-c","'@d","'\te","'\rf"`);
+    }));
+
+    it('should prefix dangerous fields with a \' by regexp', inject([Papa], (papa: Papa) => {
+        const data = [
+            ['=a', '+b', '-c', '@d', '1e', '2f', '3g', '4h']
+        ];
+        const result = papa.unparse(data, {
+            escapeFormulae: /^[1-4].*$/
+        });
+
+        expect(result).toBe(`=a,+b,-c,@d,"'1e","'2f","'3g","'4h"`);
+    }));
+
     // Test setters
     it('should set localChunkSize', inject([Papa], (papa: Papa) => {
         // TODO
