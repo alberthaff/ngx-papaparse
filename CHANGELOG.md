@@ -1,5 +1,5 @@
 5.1.0
-  - Add full for escapeFormulae.
+  - Add support for escapeFormulae.
 
 5.0.0
   - Recompiled with NG9 and NG10 support.
