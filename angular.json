@@ -139,7 +139,6 @@
       }
     }
   },
-  "defaultProject": "ngx-papaparse",
   "cli": {
     "analytics": false
   }
