@@ -11,16 +11,16 @@
 
 This is a [Papa Parse](https://github.com/mholt/PapaParse) wrapper library for Angular.
 
-<i>More information in the [full documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v5).</i>
+<i>More information in the [full documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v6).</i>
 
 ## Installation
 You can install the library with [npm](https://npmjs.com).
 
-### Angular 9+
+### Angular 14+
 
-    npm install ngx-papaparse@5 --save
+    npm install ngx-papaparse@6 --save
     
-[Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v5)
+[Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v6)
 
 
 ### Older versions of Angular
@@ -53,4 +53,4 @@ export class AppComponent {
 ``` 
 
 
-For a more detailed explanation of how to use this library, please refer to the [full documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v5). 
+For a more detailed explanation of how to use this library, please refer to the [full documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v6). 

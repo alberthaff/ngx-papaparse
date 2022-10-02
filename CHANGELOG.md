@@ -1,3 +1,7 @@
+6.0.0
+  - Add support for Angular 14 ([#100](https://github.com/alberthaff/ngx-papaparse/pull/100)).
+  - Add typings for unparse ([#58](https://github.com/alberthaff/ngx-papaparse/pull/58))
+
 5.1.0
   - Add support for escapeFormulae.
 
