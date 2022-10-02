@@ -114,6 +114,7 @@ describe('Papa', () => {
         });
 
         expect(result).toBe(`=a,+b,-c,@d,"'1e","'2f","'3g","'4h"`);
+    }));
 
     it('should generate CSV from array Object', inject([Papa], (papa: Papa) => {
         const data = [

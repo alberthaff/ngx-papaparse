@@ -1,4 +1,3 @@
-
 export type ArrayData = Array<Array<string|number>>;
 
 export type ArrayObject = Array<{ [k: string]: string|number }>;
