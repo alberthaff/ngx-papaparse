@@ -35,6 +35,25 @@ describe('Papa', () => {
         }));
     }));
 
+    it('should parse basic CSV from string and return each step', inject([Papa], (papa: Papa) => {
+        const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
+
+        const expected = [
+            ['a', 'b,', 'c"'],
+            ['d', 'e', 'f'],
+            ['g', 'h', 'i']
+        ];
+
+        let line = 0;
+        papa.parse(csv, {
+            step: result => {
+                // Check step data
+                expect(result.data).toEqual(jasmine.objectContaining(expected[line]));
+                line++;
+            }
+        });
+    }));
+
     it('should parse CSV from local file', inject([Papa], (papa: Papa) => {
         const csv = '"a","b,","c"""\nd,e,f\ng,h,i';
         const universalBOM = '\uFEFF';
@@ -95,6 +114,36 @@ describe('Papa', () => {
         });
 
         expect(result).toBe(`=a,+b,-c,@d,"'1e","'2f","'3g","'4h"`);
+    }));
+
+    it('should generate CSV from array Object', inject([Papa], (papa: Papa) => {
+        const data = [
+            { A: 'a', B: 'b,', C: 'c"' },
+            { A: 'd', B: 'e', C: 'f' },
+            { A: 'g', B: 'h', C: 'i' },
+        ];
+        const result = papa.unparse(data, {
+            delimiter: ','
+        });
+
+        expect(result).toBe('A,B,C\r\na,"b,","c"""\r\nd,e,f\r\ng,h,i');
+    }));
+
+    it('should generate CSV from Map Object', inject([Papa], (papa: Papa) => {
+        const data = {
+            fields: ['A', 'B', 'C'],
+            data: [
+                ['a', 'b,', 'c"'],
+                ['d', 'e', 'f'],
+                ['g', 'h', 'i']
+            ]
+        };
+
+        const result = papa.unparse(data, {
+            delimiter: ','
+        });
+
+        expect(result).toBe('A,B,C\r\na,"b,","c"""\r\nd,e,f\r\ng,h,i');
     }));
 
     // Test setters

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { ParseResult } from './interfaces/parse-result';
 import { ParseConfig } from './interfaces/parse-config';
 import { UnparseConfig } from './interfaces/unparse-config';
+import { UnparseData } from './interfaces/unparse-data';
 import * as lib from 'papaparse/papaparse.min.js';
 
 @Injectable({
@@ -20,7 +21,7 @@ export class Papa {
     /**
      * Convert an array into CSV
      */
-    public unparse(data, config?: UnparseConfig): string {
+    public unparse(data: UnparseData, config?: UnparseConfig): string {
         return this._papa.unparse(data, config);
     }
 
