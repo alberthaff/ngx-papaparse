@@ -7,5 +7,8 @@
   "lib": {
     "entryFile": "src/public_api.ts"
   },
-  "deleteDestPath": true
+  "deleteDestPath": true,
+  "allowedNonPeerDependencies": [
+    "papaparse"
+  ]
 }
