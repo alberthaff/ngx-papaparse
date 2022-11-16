@@ -1,3 +1,6 @@
+6.0.2
+  - Add generic type to PapaParse ([#104](https://github.com/alberthaff/ngx-papaparse/pull/104)).
+
 6.0.1
   - Make Papaparse a dependency ([#103](https://github.com/alberthaff/ngx-papaparse/pull/103)), closes [#102](https://github.com/alberthaff/ngx-papaparse/issues/102).
 
