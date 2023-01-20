@@ -1,3 +1,6 @@
+7.0.0
+  - Add support for Angular 15 ([#109](https://github.com/alberthaff/ngx-papaparse/pull/109))
+
 6.0.2
   - Add generic type to PapaParse ([#104](https://github.com/alberthaff/ngx-papaparse/pull/104)).
 
