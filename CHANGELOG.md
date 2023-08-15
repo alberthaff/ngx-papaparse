@@ -1,3 +1,6 @@
+8.0.0
+  - Add support for Angular 16 ([#114](https://github.com/alberthaff/ngx-papaparse/pull/114))
+ 
 7.0.0
   - Add support for Angular 15 ([#109](https://github.com/alberthaff/ngx-papaparse/pull/109))
 

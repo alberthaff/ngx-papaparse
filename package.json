@@ -1,13 +1,13 @@
 {
   "name": "ngx-papaparse",
-  "version": "7.0.0",
+  "version": "8.0.0",
   "description": "Papa Parse wrapper for Angular. Fast parser-library for CSV to JSON and vice versa, with built in support for background-workers.",
   "author": "Albert Haff <ahn@haffdata.com>",
   "license": "MIT",
   "repository": {
     "url": "https://github.com/alberthaff/ngx-papaparse"
   },
-  "homepage": "https://alberthaff.dk/projects/ngx-papaparse/docs/v7",
+  "homepage": "https://alberthaff.dk/projects/ngx-papaparse/docs/v8",
   "keywords": [
     "csv",
     "reader",
