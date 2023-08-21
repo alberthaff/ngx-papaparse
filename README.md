@@ -16,9 +16,9 @@ This is a [Papa Parse](https://github.com/mholt/PapaParse) wrapper library for A
 ## Installation
 You can install the library with [npm](https://npmjs.com).
 
-### Angular 15+
+### Angular 16+
 
-    npm install ngx-papaparse@7 --save
+    npm install ngx-papaparse@8 --save
     
 [Documentation](https://alberthaff.dk/projects/ngx-papaparse/docs/v7)
 
