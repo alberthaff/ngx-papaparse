@@ -13,14 +13,14 @@ $ npm install ngx-papaparse@8 --save
 
 Once installed, Papa Parse is automatically imported to your project.
 
-## Angular 16 or later
-If you are using Angular 16 or later, you will be met with following warning: 
+## CommonJS warning
+Since this library depends on a CommonJS library, you will be met with following warning: 
 
 ```text
 WARNING in node_modules/ngx-papaparse/fesm2015/ngx-papaparse.js depends on 'papaparse/papaparse.min.js'. CommonJS or AMD dependencies can cause optimization bailouts.
 ```
 
-To disable this warning, add following to your build options in `angular.json`-file:
+To disable the warning, add following to your build options in `angular.json`-file:
 ```json
 "build": {
     "builder": "@angular-devkit/build-angular:browser",
